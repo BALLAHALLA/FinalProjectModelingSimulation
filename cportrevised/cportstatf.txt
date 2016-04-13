@@ -1,0 +1,22 @@
+OOSimL model: Port System with Conditions
+Simulation date: date: 2/24/2016 time: 11:36
+--------------------STATISTICS REPORT----------------------------
+-----------------------------------------------------------------
+Random generator: Ship inter-arrival
+Distribution: Negative exponential
+Number of obs: 88
+Seed: 7
+Mean: 46.45
+-----------------------------------------------------------------
+Random generator: Unload interval
+Distribution: Normal
+Number of obs: 88
+Seed: 24
+Mean: 24.5
+Standard deviation: 3.85
+ 
+End Simulation of Port System with Conditions date: 2/24/2016 time: 11:36
+Elapsed computer time: 904 msec
+ 
+Total number of ships that arrived: 88
+Average wait period: 158.467

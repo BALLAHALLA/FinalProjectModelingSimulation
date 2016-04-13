@@ -1,0 +1,1015 @@
+OOSimL model: Port System with Conditions
+Simulation date: 2/24/2016 time: 11:36
+------------------------- TRACE ---------------------------------
+0000.000 Tide lowtide = true
+0060.939 Ship1 arrives 
+0060.939 Ship1 requests pier
+0060.939 Ship1 acquired pier
+0060.939 Ship1 Testing condition: false
+0125.178 Ship2 arrives 
+0125.178 Ship2 requests pier
+0125.178 Ship2 acquired pier
+0125.178 Ship2 Testing condition: false
+0145.068 Ship3 arrives 
+0145.068 Ship3 requests pier
+0240.000 Tide lowtide = false
+0240.000 Ship1 Testing condition: true
+0240.000 Ship1 acquires 2 tugboats
+0240.000 Ship2 Testing condition: false
+0250.775 Ship4 arrives 
+0250.775 Ship4 requests pier
+0262.500 Ship1 has docked, releases tugs
+0262.500 Ship1 starts to unload for: 25.809208228089705
+0262.500 Ship2 Testing condition: true
+0262.500 Ship2 acquires 2 tugboats
+0285.000 Ship2 has docked, releases tugs
+0285.000 Ship2 starts to unload for: 26.670940996437896
+0288.309 Ship1 finished unloading, requesting tugboat
+0288.309 Ship1 acquires 1 tugboat to undock
+0302.934 Ship1 releases tugboat
+0302.934 Ship1 departing
+0302.934 Ship3 acquired pier
+0302.934 Ship3 Testing condition: true
+0302.934 Ship3 acquires 2 tugboats
+0307.983 Ship5 arrives 
+0307.983 Ship5 requests pier
+0311.671 Ship2 finished unloading, requesting tugboat
+0311.671 Ship2 acquires 1 tugboat to undock
+0325.434 Ship3 has docked, releases tugs
+0325.434 Ship3 starts to unload for: 22.871715828141078
+0326.296 Ship2 releases tugboat
+0326.296 Ship2 departing
+0326.296 Ship4 acquired pier
+0326.296 Ship4 Testing condition: true
+0326.296 Ship4 acquires 2 tugboats
+0328.130 Ship6 arrives 
+0328.130 Ship6 requests pier
+0334.107 Ship7 arrives 
+0334.107 Ship7 requests pier
+0348.306 Ship3 finished unloading, requesting tugboat
+0348.306 Ship3 acquires 1 tugboat to undock
+0348.796 Ship4 has docked, releases tugs
+0348.796 Ship4 starts to unload for: 23.703780927128662
+0362.931 Ship3 releases tugboat
+0362.931 Ship3 departing
+0362.931 Ship5 acquired pier
+0362.931 Ship5 Testing condition: true
+0362.931 Ship5 acquires 2 tugboats
+0372.500 Ship4 finished unloading, requesting tugboat
+0372.500 Ship4 acquires 1 tugboat to undock
+0385.431 Ship5 has docked, releases tugs
+0385.431 Ship5 starts to unload for: 25.052713213093494
+0387.125 Ship4 releases tugboat
+0387.125 Ship4 departing
+0387.125 Ship6 acquired pier
+0387.125 Ship6 Testing condition: true
+0387.125 Ship6 acquires 2 tugboats
+0409.625 Ship6 has docked, releases tugs
+0409.625 Ship6 starts to unload for: 26.33082535888924
+0410.484 Ship5 finished unloading, requesting tugboat
+0410.484 Ship5 acquires 1 tugboat to undock
+0422.201 Ship8 arrives 
+0422.201 Ship8 requests pier
+0425.109 Ship5 releases tugboat
+0425.109 Ship5 departing
+0425.109 Ship7 acquired pier
+0425.109 Ship7 Testing condition: true
+0425.109 Ship7 acquires 2 tugboats
+0426.237 Ship9 arrives 
+0426.237 Ship9 requests pier
+0435.956 Ship6 finished unloading, requesting tugboat
+0435.956 Ship6 acquires 1 tugboat to undock
+0447.609 Ship7 has docked, releases tugs
+0447.609 Ship7 starts to unload for: 29.20456643639494
+0450.581 Ship6 releases tugboat
+0450.581 Ship6 departing
+0450.581 Ship8 acquired pier
+0450.581 Ship8 Testing condition: true
+0450.581 Ship8 acquires 2 tugboats
+0473.081 Ship8 has docked, releases tugs
+0473.081 Ship8 starts to unload for: 21.656931259551946
+0476.813 Ship7 finished unloading, requesting tugboat
+0476.813 Ship7 acquires 1 tugboat to undock
+0491.438 Ship7 releases tugboat
+0491.438 Ship7 departing
+0491.438 Ship9 acquired pier
+0491.438 Ship9 Testing condition: true
+0491.438 Ship9 acquires 2 tugboats
+0494.737 Ship8 finished unloading, requesting tugboat
+0494.737 Ship8 acquires 1 tugboat to undock
+0509.362 Ship8 releases tugboat
+0509.362 Ship8 departing
+0513.938 Ship9 has docked, releases tugs
+0513.938 Ship9 starts to unload for: 18.75378853483529
+0532.692 Ship9 finished unloading, requesting tugboat
+0532.692 Ship9 acquires 1 tugboat to undock
+0547.317 Ship9 releases tugboat
+0547.317 Ship9 departing
+0548.936 Ship10 arrives 
+0548.936 Ship10 requests pier
+0548.936 Ship10 acquired pier
+0548.936 Ship10 Testing condition: true
+0548.936 Ship10 acquires 2 tugboats
+0571.436 Ship10 has docked, releases tugs
+0571.436 Ship10 starts to unload for: 21.098041979774507
+0592.534 Ship10 finished unloading, requesting tugboat
+0592.534 Ship10 acquires 1 tugboat to undock
+0596.601 Ship11 arrives 
+0596.601 Ship11 requests pier
+0596.601 Ship11 acquired pier
+0596.601 Ship11 Testing condition: true
+0596.601 Ship11 acquires 2 tugboats
+0607.159 Ship10 releases tugboat
+0607.159 Ship10 departing
+0619.101 Ship11 has docked, releases tugs
+0619.101 Ship11 starts to unload for: 25.401644062470233
+0644.502 Ship11 finished unloading, requesting tugboat
+0644.502 Ship11 acquires 1 tugboat to undock
+0659.127 Ship11 releases tugboat
+0659.127 Ship11 departing
+0667.948 Ship12 arrives 
+0667.948 Ship12 requests pier
+0667.948 Ship12 acquired pier
+0667.948 Ship12 Testing condition: true
+0667.948 Ship12 acquires 2 tugboats
+0690.448 Ship12 has docked, releases tugs
+0690.448 Ship12 starts to unload for: 24.529440064552784
+0709.246 Ship13 arrives 
+0709.246 Ship13 requests pier
+0709.246 Ship13 acquired pier
+0709.246 Ship13 Testing condition: true
+0709.246 Ship13 acquires 2 tugboats
+0714.977 Ship12 finished unloading, requesting tugboat
+0714.977 Ship12 acquires 1 tugboat to undock
+0729.602 Ship12 releases tugboat
+0729.602 Ship12 departing
+0731.746 Ship13 has docked, releases tugs
+0731.746 Ship13 starts to unload for: 30.190196655440694
+0738.997 Ship14 arrives 
+0738.997 Ship14 requests pier
+0738.997 Ship14 acquired pier
+0738.997 Ship14 Testing condition: true
+0738.997 Ship14 acquires 2 tugboats
+0752.635 Ship15 arrives 
+0752.635 Ship15 requests pier
+0761.497 Ship14 has docked, releases tugs
+0761.497 Ship14 starts to unload for: 19.995893140413227
+0761.936 Ship13 finished unloading, requesting tugboat
+0761.936 Ship13 acquires 1 tugboat to undock
+0775.037 Ship16 arrives 
+0775.037 Ship16 requests pier
+0776.561 Ship13 releases tugboat
+0776.561 Ship13 departing
+0776.561 Ship15 acquired pier
+0776.561 Ship15 Testing condition: true
+0776.561 Ship15 acquires 2 tugboats
+0780.000 Tide lowtide = true
+0781.493 Ship14 finished unloading, requesting tugboat
+0781.493 Ship14 acquires 1 tugboat to undock
+0796.118 Ship14 releases tugboat
+0796.118 Ship14 departing
+0796.118 Ship16 acquired pier
+0796.118 Ship16 Testing condition: false
+0799.061 Ship15 has docked, releases tugs
+0799.061 Ship15 starts to unload for: 25.976492856983608
+0799.061 Ship16 Testing condition: false
+0825.037 Ship15 finished unloading, requesting tugboat
+0825.037 Ship15 acquires 1 tugboat to undock
+0839.662 Ship15 releases tugboat
+0839.662 Ship15 departing
+0839.662 Ship16 Testing condition: false
+0843.445 Ship17 arrives 
+0843.445 Ship17 requests pier
+0843.445 Ship17 acquired pier
+0843.445 Ship17 Testing condition: false
+0854.983 Ship18 arrives 
+0854.983 Ship18 requests pier
+0872.422 Ship19 arrives 
+0872.422 Ship19 requests pier
+0966.013 Ship20 arrives 
+0966.013 Ship20 requests pier
+0971.083 Ship21 arrives 
+0971.083 Ship21 requests pier
+0998.116 Ship22 arrives 
+0998.116 Ship22 requests pier
+1020.000 Tide lowtide = false
+1020.000 Ship16 Testing condition: true
+1020.000 Ship16 acquires 2 tugboats
+1020.000 Ship17 Testing condition: false
+1032.461 Ship23 arrives 
+1032.461 Ship23 requests pier
+1037.515 Ship24 arrives 
+1037.515 Ship24 requests pier
+1042.500 Ship16 has docked, releases tugs
+1042.500 Ship16 starts to unload for: 27.673406634713057
+1042.500 Ship17 Testing condition: true
+1042.500 Ship17 acquires 2 tugboats
+1065.000 Ship17 has docked, releases tugs
+1065.000 Ship17 starts to unload for: 23.87035344945498
+1070.173 Ship16 finished unloading, requesting tugboat
+1070.173 Ship16 acquires 1 tugboat to undock
+1079.771 Ship25 arrives 
+1079.771 Ship25 requests pier
+1084.798 Ship16 releases tugboat
+1084.798 Ship16 departing
+1084.798 Ship18 acquired pier
+1084.798 Ship18 Testing condition: true
+1084.798 Ship18 acquires 2 tugboats
+1088.870 Ship17 finished unloading, requesting tugboat
+1088.870 Ship17 acquires 1 tugboat to undock
+1103.495 Ship17 releases tugboat
+1103.495 Ship17 departing
+1103.495 Ship19 acquired pier
+1103.495 Ship19 Testing condition: false
+1107.298 Ship18 has docked, releases tugs
+1107.298 Ship18 starts to unload for: 26.450711738059688
+1107.298 Ship19 Testing condition: true
+1107.298 Ship19 acquires 2 tugboats
+1129.798 Ship19 has docked, releases tugs
+1129.798 Ship19 starts to unload for: 31.18084073378308
+1133.749 Ship18 finished unloading, requesting tugboat
+1133.749 Ship18 acquires 1 tugboat to undock
+1143.848 Ship26 arrives 
+1143.848 Ship26 requests pier
+1148.374 Ship18 releases tugboat
+1148.374 Ship18 departing
+1148.374 Ship20 acquired pier
+1148.374 Ship20 Testing condition: true
+1148.374 Ship20 acquires 2 tugboats
+1160.979 Ship19 finished unloading, requesting tugboat
+1160.979 Ship19 acquires 1 tugboat to undock
+1166.944 Ship27 arrives 
+1166.944 Ship27 requests pier
+1170.874 Ship20 has docked, releases tugs
+1170.874 Ship20 starts to unload for: 21.207903747498907
+1175.604 Ship19 releases tugboat
+1175.604 Ship19 departing
+1175.604 Ship21 acquired pier
+1175.604 Ship21 Testing condition: true
+1175.604 Ship21 acquires 2 tugboats
+1192.082 Ship20 finished unloading, requesting tugboat
+1192.082 Ship20 acquires 1 tugboat to undock
+1198.104 Ship21 has docked, releases tugs
+1198.104 Ship21 starts to unload for: 17.826877873595606
+1206.707 Ship20 releases tugboat
+1206.707 Ship20 departing
+1206.707 Ship22 acquired pier
+1206.707 Ship22 Testing condition: true
+1206.707 Ship22 acquires 2 tugboats
+1215.931 Ship21 finished unloading, requesting tugboat
+1215.931 Ship21 acquires 1 tugboat to undock
+1229.207 Ship22 has docked, releases tugs
+1229.207 Ship22 starts to unload for: 18.52286561623414
+1230.556 Ship21 releases tugboat
+1230.556 Ship21 departing
+1230.556 Ship23 acquired pier
+1230.556 Ship23 Testing condition: true
+1230.556 Ship23 acquires 2 tugboats
+1247.730 Ship22 finished unloading, requesting tugboat
+1247.730 Ship22 acquires 1 tugboat to undock
+1250.636 Ship28 arrives 
+1250.636 Ship28 requests pier
+1253.056 Ship23 has docked, releases tugs
+1253.056 Ship23 starts to unload for: 26.54591034388692
+1262.355 Ship22 releases tugboat
+1262.355 Ship22 departing
+1262.355 Ship24 acquired pier
+1262.355 Ship24 Testing condition: true
+1262.355 Ship24 acquires 2 tugboats
+1279.553 Ship29 arrives 
+1279.553 Ship29 requests pier
+1279.602 Ship23 finished unloading, requesting tugboat
+1279.602 Ship23 acquires 1 tugboat to undock
+1284.855 Ship24 has docked, releases tugs
+1284.855 Ship24 starts to unload for: 25.757697641822144
+1294.227 Ship23 releases tugboat
+1294.227 Ship23 departing
+1294.227 Ship25 acquired pier
+1294.227 Ship25 Testing condition: true
+1294.227 Ship25 acquires 2 tugboats
+1307.206 Ship30 arrives 
+1307.206 Ship30 requests pier
+1310.613 Ship24 finished unloading, requesting tugboat
+1310.613 Ship24 acquires 1 tugboat to undock
+1316.727 Ship25 has docked, releases tugs
+1316.727 Ship25 starts to unload for: 25.29540781653918
+1325.238 Ship24 releases tugboat
+1325.238 Ship24 departing
+1325.238 Ship26 acquired pier
+1325.238 Ship26 Testing condition: true
+1325.238 Ship26 acquires 2 tugboats
+1342.022 Ship25 finished unloading, requesting tugboat
+1342.022 Ship25 acquires 1 tugboat to undock
+1347.738 Ship26 has docked, releases tugs
+1347.738 Ship26 starts to unload for: 20.985327910567587
+1356.647 Ship25 releases tugboat
+1356.647 Ship25 departing
+1356.647 Ship27 acquired pier
+1356.647 Ship27 Testing condition: true
+1356.647 Ship27 acquires 2 tugboats
+1368.723 Ship26 finished unloading, requesting tugboat
+1368.723 Ship26 acquires 1 tugboat to undock
+1379.147 Ship27 has docked, releases tugs
+1379.147 Ship27 starts to unload for: 28.258281076527183
+1383.348 Ship26 releases tugboat
+1383.348 Ship26 departing
+1383.348 Ship28 acquired pier
+1383.348 Ship28 Testing condition: true
+1383.348 Ship28 acquires 2 tugboats
+1405.848 Ship28 has docked, releases tugs
+1405.848 Ship28 starts to unload for: 27.870508836883673
+1407.406 Ship27 finished unloading, requesting tugboat
+1407.406 Ship27 acquires 1 tugboat to undock
+1420.599 Ship31 arrives 
+1420.599 Ship31 requests pier
+1422.031 Ship27 releases tugboat
+1422.031 Ship27 departing
+1422.031 Ship29 acquired pier
+1422.031 Ship29 Testing condition: true
+1422.031 Ship29 acquires 2 tugboats
+1425.981 Ship32 arrives 
+1425.981 Ship32 requests pier
+1433.718 Ship28 finished unloading, requesting tugboat
+1433.718 Ship28 acquires 1 tugboat to undock
+1444.531 Ship29 has docked, releases tugs
+1444.531 Ship29 starts to unload for: 25.59631820544212
+1448.343 Ship28 releases tugboat
+1448.343 Ship28 departing
+1448.343 Ship30 acquired pier
+1448.343 Ship30 Testing condition: true
+1448.343 Ship30 acquires 2 tugboats
+1468.775 Ship33 arrives 
+1468.775 Ship33 requests pier
+1470.127 Ship29 finished unloading, requesting tugboat
+1470.127 Ship29 acquires 1 tugboat to undock
+1470.843 Ship30 has docked, releases tugs
+1470.843 Ship30 starts to unload for: 23.481932199303937
+1478.948 Ship34 arrives 
+1478.948 Ship34 requests pier
+1484.752 Ship29 releases tugboat
+1484.752 Ship29 departing
+1484.752 Ship31 acquired pier
+1484.752 Ship31 Testing condition: true
+1484.752 Ship31 acquires 2 tugboats
+1494.325 Ship30 finished unloading, requesting tugboat
+1494.325 Ship30 acquires 1 tugboat to undock
+1507.252 Ship31 has docked, releases tugs
+1507.252 Ship31 starts to unload for: 23.7445149972408
+1508.950 Ship30 releases tugboat
+1508.950 Ship30 departing
+1508.950 Ship32 acquired pier
+1508.950 Ship32 Testing condition: true
+1508.950 Ship32 acquires 2 tugboats
+1522.478 Ship35 arrives 
+1522.478 Ship35 requests pier
+1530.997 Ship31 finished unloading, requesting tugboat
+1530.997 Ship31 acquires 1 tugboat to undock
+1531.450 Ship32 has docked, releases tugs
+1531.450 Ship32 starts to unload for: 26.018813784196453
+1545.622 Ship31 releases tugboat
+1545.622 Ship31 departing
+1545.622 Ship33 acquired pier
+1545.622 Ship33 Testing condition: true
+1545.622 Ship33 acquires 2 tugboats
+1557.469 Ship32 finished unloading, requesting tugboat
+1557.469 Ship32 acquires 1 tugboat to undock
+1560.000 Tide lowtide = true
+1566.481 Ship36 arrives 
+1566.481 Ship36 requests pier
+1568.122 Ship33 has docked, releases tugs
+1568.122 Ship33 starts to unload for: 21.200389876584822
+1572.094 Ship32 releases tugboat
+1572.094 Ship32 departing
+1572.094 Ship34 acquired pier
+1572.094 Ship34 Testing condition: false
+1589.322 Ship33 finished unloading, requesting tugboat
+1589.322 Ship33 acquires 1 tugboat to undock
+1603.947 Ship33 releases tugboat
+1603.947 Ship33 departing
+1603.947 Ship35 acquired pier
+1603.947 Ship35 Testing condition: false
+1603.947 Ship34 Testing condition: false
+1636.497 Ship37 arrives 
+1636.497 Ship37 requests pier
+1638.366 Ship38 arrives 
+1638.366 Ship38 requests pier
+1671.126 Ship39 arrives 
+1671.126 Ship39 requests pier
+1797.448 Ship40 arrives 
+1797.448 Ship40 requests pier
+1800.000 Tide lowtide = false
+1800.000 Ship35 Testing condition: true
+1800.000 Ship35 acquires 2 tugboats
+1800.000 Ship34 Testing condition: false
+1817.667 Ship41 arrives 
+1817.667 Ship41 requests pier
+1822.500 Ship35 has docked, releases tugs
+1822.500 Ship35 starts to unload for: 18.828577539413384
+1822.500 Ship34 Testing condition: true
+1822.500 Ship34 acquires 2 tugboats
+1841.329 Ship35 finished unloading, requesting tugboat
+1841.329 Ship35 acquires 1 tugboat to undock
+1845.000 Ship34 has docked, releases tugs
+1845.000 Ship34 starts to unload for: 18.409750666347986
+1855.954 Ship35 releases tugboat
+1855.954 Ship35 departing
+1855.954 Ship36 acquired pier
+1855.954 Ship36 Testing condition: true
+1855.954 Ship36 acquires 2 tugboats
+1863.410 Ship34 finished unloading, requesting tugboat
+1863.410 Ship34 acquires 1 tugboat to undock
+1878.035 Ship34 releases tugboat
+1878.035 Ship34 departing
+1878.035 Ship37 acquired pier
+1878.035 Ship37 Testing condition: false
+1878.454 Ship36 has docked, releases tugs
+1878.454 Ship36 starts to unload for: 23.47021365599329
+1878.454 Ship37 Testing condition: true
+1878.454 Ship37 acquires 2 tugboats
+1900.954 Ship37 has docked, releases tugs
+1900.954 Ship37 starts to unload for: 27.194150585515853
+1901.924 Ship36 finished unloading, requesting tugboat
+1901.924 Ship36 acquires 1 tugboat to undock
+1916.549 Ship36 releases tugboat
+1916.549 Ship36 departing
+1916.549 Ship38 acquired pier
+1916.549 Ship38 Testing condition: true
+1916.549 Ship38 acquires 2 tugboats
+1928.148 Ship37 finished unloading, requesting tugboat
+1928.148 Ship37 acquires 1 tugboat to undock
+1939.049 Ship38 has docked, releases tugs
+1939.049 Ship38 starts to unload for: 23.43970234917504
+1942.773 Ship37 releases tugboat
+1942.773 Ship37 departing
+1942.773 Ship39 acquired pier
+1942.773 Ship39 Testing condition: true
+1942.773 Ship39 acquires 2 tugboats
+1962.488 Ship38 finished unloading, requesting tugboat
+1962.488 Ship38 acquires 1 tugboat to undock
+1965.273 Ship39 has docked, releases tugs
+1965.273 Ship39 starts to unload for: 28.986552357287657
+1977.113 Ship38 releases tugboat
+1977.113 Ship38 departing
+1977.113 Ship40 acquired pier
+1977.113 Ship40 Testing condition: true
+1977.113 Ship40 acquires 2 tugboats
+1977.513 Ship42 arrives 
+1977.513 Ship42 requests pier
+1994.259 Ship39 finished unloading, requesting tugboat
+1994.259 Ship39 acquires 1 tugboat to undock
+1999.613 Ship40 has docked, releases tugs
+1999.613 Ship40 starts to unload for: 25.590522708596083
+2004.826 Ship43 arrives 
+2004.826 Ship43 requests pier
+2008.884 Ship39 releases tugboat
+2008.884 Ship39 departing
+2008.884 Ship41 acquired pier
+2008.884 Ship41 Testing condition: true
+2008.884 Ship41 acquires 2 tugboats
+2025.204 Ship40 finished unloading, requesting tugboat
+2025.204 Ship40 acquires 1 tugboat to undock
+2031.384 Ship41 has docked, releases tugs
+2031.384 Ship41 starts to unload for: 25.074796229540777
+2039.829 Ship40 releases tugboat
+2039.829 Ship40 departing
+2039.829 Ship42 acquired pier
+2039.829 Ship42 Testing condition: true
+2039.829 Ship42 acquires 2 tugboats
+2056.459 Ship41 finished unloading, requesting tugboat
+2056.459 Ship41 acquires 1 tugboat to undock
+2062.329 Ship42 has docked, releases tugs
+2062.329 Ship42 starts to unload for: 31.993962556863373
+2070.540 Ship44 arrives 
+2070.540 Ship44 requests pier
+2071.084 Ship41 releases tugboat
+2071.084 Ship41 departing
+2071.084 Ship43 acquired pier
+2071.084 Ship43 Testing condition: true
+2071.084 Ship43 acquires 2 tugboats
+2089.981 Ship45 arrives 
+2089.981 Ship45 requests pier
+2093.584 Ship43 has docked, releases tugs
+2093.584 Ship43 starts to unload for: 23.927243635779202
+2094.323 Ship42 finished unloading, requesting tugboat
+2094.323 Ship42 acquires 1 tugboat to undock
+2103.751 Ship46 arrives 
+2103.751 Ship46 requests pier
+2108.948 Ship42 releases tugboat
+2108.948 Ship42 departing
+2108.948 Ship44 acquired pier
+2108.948 Ship44 Testing condition: true
+2108.948 Ship44 acquires 2 tugboats
+2117.511 Ship43 finished unloading, requesting tugboat
+2117.511 Ship43 acquires 1 tugboat to undock
+2123.064 Ship47 arrives 
+2123.064 Ship47 requests pier
+2131.448 Ship44 has docked, releases tugs
+2131.448 Ship44 starts to unload for: 24.701045464389342
+2132.136 Ship43 releases tugboat
+2132.136 Ship43 departing
+2132.136 Ship45 acquired pier
+2132.136 Ship45 Testing condition: true
+2132.136 Ship45 acquires 2 tugboats
+2154.636 Ship45 has docked, releases tugs
+2154.636 Ship45 starts to unload for: 28.026363282031127
+2156.149 Ship44 finished unloading, requesting tugboat
+2156.149 Ship44 acquires 1 tugboat to undock
+2162.574 Ship48 arrives 
+2162.574 Ship48 requests pier
+2170.774 Ship44 releases tugboat
+2170.774 Ship44 departing
+2170.774 Ship46 acquired pier
+2170.774 Ship46 Testing condition: true
+2170.774 Ship46 acquires 2 tugboats
+2182.663 Ship45 finished unloading, requesting tugboat
+2182.663 Ship45 acquires 1 tugboat to undock
+2187.110 Ship49 arrives 
+2187.110 Ship49 requests pier
+2193.274 Ship46 has docked, releases tugs
+2193.274 Ship46 starts to unload for: 25.42125401853596
+2197.176 Ship50 arrives 
+2197.176 Ship50 requests pier
+2197.288 Ship45 releases tugboat
+2197.288 Ship45 departing
+2197.288 Ship47 acquired pier
+2197.288 Ship47 Testing condition: true
+2197.288 Ship47 acquires 2 tugboats
+2218.695 Ship46 finished unloading, requesting tugboat
+2218.695 Ship46 acquires 1 tugboat to undock
+2219.788 Ship47 has docked, releases tugs
+2219.788 Ship47 starts to unload for: 16.32367353753325
+2233.320 Ship46 releases tugboat
+2233.320 Ship46 departing
+2233.320 Ship48 acquired pier
+2233.320 Ship48 Testing condition: true
+2233.320 Ship48 acquires 2 tugboats
+2236.111 Ship47 finished unloading, requesting tugboat
+2236.111 Ship47 acquires 1 tugboat to undock
+2250.736 Ship47 releases tugboat
+2250.736 Ship47 departing
+2250.736 Ship49 acquired pier
+2250.736 Ship49 Testing condition: false
+2253.330 Ship51 arrives 
+2253.330 Ship51 requests pier
+2255.820 Ship48 has docked, releases tugs
+2255.820 Ship48 starts to unload for: 26.810741830386185
+2255.820 Ship49 Testing condition: true
+2255.820 Ship49 acquires 2 tugboats
+2278.320 Ship49 has docked, releases tugs
+2278.320 Ship49 starts to unload for: 21.719255246589395
+2282.631 Ship48 finished unloading, requesting tugboat
+2282.631 Ship48 acquires 1 tugboat to undock
+2297.256 Ship48 releases tugboat
+2297.256 Ship48 departing
+2297.256 Ship50 acquired pier
+2297.256 Ship50 Testing condition: true
+2297.256 Ship50 acquires 2 tugboats
+2300.040 Ship49 finished unloading, requesting tugboat
+2300.040 Ship49 acquires 1 tugboat to undock
+2314.665 Ship49 releases tugboat
+2314.665 Ship49 departing
+2314.665 Ship51 acquired pier
+2314.665 Ship51 Testing condition: false
+2319.756 Ship50 has docked, releases tugs
+2319.756 Ship50 starts to unload for: 28.300764417954767
+2319.756 Ship51 Testing condition: true
+2319.756 Ship51 acquires 2 tugboats
+2333.991 Ship52 arrives 
+2333.991 Ship52 requests pier
+2339.412 Ship53 arrives 
+2339.412 Ship53 requests pier
+2340.000 Tide lowtide = true
+2342.256 Ship51 has docked, releases tugs
+2342.256 Ship51 starts to unload for: 23.77657713530131
+2348.057 Ship50 finished unloading, requesting tugboat
+2348.057 Ship50 acquires 1 tugboat to undock
+2356.057 Ship54 arrives 
+2356.057 Ship54 requests pier
+2362.682 Ship50 releases tugboat
+2362.682 Ship50 departing
+2362.682 Ship52 acquired pier
+2362.682 Ship52 Testing condition: false
+2366.033 Ship51 finished unloading, requesting tugboat
+2366.033 Ship51 acquires 1 tugboat to undock
+2380.658 Ship51 releases tugboat
+2380.658 Ship51 departing
+2380.658 Ship53 acquired pier
+2380.658 Ship53 Testing condition: false
+2380.658 Ship52 Testing condition: false
+2415.855 Ship55 arrives 
+2415.855 Ship55 requests pier
+2431.721 Ship56 arrives 
+2431.721 Ship56 requests pier
+2449.576 Ship57 arrives 
+2449.576 Ship57 requests pier
+2512.472 Ship58 arrives 
+2512.472 Ship58 requests pier
+2578.141 Ship59 arrives 
+2578.141 Ship59 requests pier
+2580.000 Tide lowtide = false
+2580.000 Ship53 Testing condition: true
+2580.000 Ship53 acquires 2 tugboats
+2580.000 Ship52 Testing condition: false
+2584.811 Ship60 arrives 
+2584.811 Ship60 requests pier
+2602.500 Ship53 has docked, releases tugs
+2602.500 Ship53 starts to unload for: 19.08943365797601
+2602.500 Ship52 Testing condition: true
+2602.500 Ship52 acquires 2 tugboats
+2605.702 Ship61 arrives 
+2605.702 Ship61 requests pier
+2621.589 Ship53 finished unloading, requesting tugboat
+2621.589 Ship53 acquires 1 tugboat to undock
+2625.000 Ship52 has docked, releases tugs
+2625.000 Ship52 starts to unload for: 23.07026250187194
+2635.693 Ship62 arrives 
+2635.693 Ship62 requests pier
+2636.214 Ship53 releases tugboat
+2636.214 Ship53 departing
+2636.214 Ship54 acquired pier
+2636.214 Ship54 Testing condition: true
+2636.214 Ship54 acquires 2 tugboats
+2648.070 Ship52 finished unloading, requesting tugboat
+2648.070 Ship52 acquires 1 tugboat to undock
+2658.714 Ship54 has docked, releases tugs
+2658.714 Ship54 starts to unload for: 22.727637592044267
+2662.695 Ship52 releases tugboat
+2662.695 Ship52 departing
+2662.695 Ship55 acquired pier
+2662.695 Ship55 Testing condition: true
+2662.695 Ship55 acquires 2 tugboats
+2681.442 Ship54 finished unloading, requesting tugboat
+2681.442 Ship54 acquires 1 tugboat to undock
+2685.195 Ship55 has docked, releases tugs
+2685.195 Ship55 starts to unload for: 26.067183809187718
+2696.067 Ship54 releases tugboat
+2696.067 Ship54 departing
+2696.067 Ship56 acquired pier
+2696.067 Ship56 Testing condition: true
+2696.067 Ship56 acquires 2 tugboats
+2709.819 Ship63 arrives 
+2709.819 Ship63 requests pier
+2711.262 Ship55 finished unloading, requesting tugboat
+2711.262 Ship55 acquires 1 tugboat to undock
+2718.567 Ship56 has docked, releases tugs
+2718.567 Ship56 starts to unload for: 29.759875258504977
+2724.979 Ship64 arrives 
+2724.979 Ship64 requests pier
+2725.887 Ship55 releases tugboat
+2725.887 Ship55 departing
+2725.887 Ship57 acquired pier
+2725.887 Ship57 Testing condition: true
+2725.887 Ship57 acquires 2 tugboats
+2748.327 Ship56 finished unloading, requesting tugboat
+2748.327 Ship56 acquires 1 tugboat to undock
+2748.387 Ship57 has docked, releases tugs
+2748.387 Ship57 starts to unload for: 24.902007074555
+2762.952 Ship56 releases tugboat
+2762.952 Ship56 departing
+2762.952 Ship58 acquired pier
+2762.952 Ship58 Testing condition: true
+2762.952 Ship58 acquires 2 tugboats
+2773.289 Ship57 finished unloading, requesting tugboat
+2773.289 Ship57 acquires 1 tugboat to undock
+2785.452 Ship58 has docked, releases tugs
+2785.452 Ship58 starts to unload for: 22.73925999090559
+2787.914 Ship57 releases tugboat
+2787.914 Ship57 departing
+2787.914 Ship59 acquired pier
+2787.914 Ship59 Testing condition: true
+2787.914 Ship59 acquires 2 tugboats
+2788.566 Ship65 arrives 
+2788.566 Ship65 requests pier
+2808.191 Ship58 finished unloading, requesting tugboat
+2808.191 Ship58 acquires 1 tugboat to undock
+2810.414 Ship59 has docked, releases tugs
+2810.414 Ship59 starts to unload for: 25.034868220407844
+2822.816 Ship58 releases tugboat
+2822.816 Ship58 departing
+2822.816 Ship60 acquired pier
+2822.816 Ship60 Testing condition: true
+2822.816 Ship60 acquires 2 tugboats
+2830.410 Ship66 arrives 
+2830.410 Ship66 requests pier
+2835.449 Ship59 finished unloading, requesting tugboat
+2835.449 Ship59 acquires 1 tugboat to undock
+2845.316 Ship60 has docked, releases tugs
+2845.316 Ship60 starts to unload for: 28.373177067665864
+2850.074 Ship59 releases tugboat
+2850.074 Ship59 departing
+2850.074 Ship61 acquired pier
+2850.074 Ship61 Testing condition: true
+2850.074 Ship61 acquires 2 tugboats
+2872.574 Ship61 has docked, releases tugs
+2872.574 Ship61 starts to unload for: 23.95454302002327
+2873.689 Ship60 finished unloading, requesting tugboat
+2873.689 Ship60 acquires 1 tugboat to undock
+2888.314 Ship60 releases tugboat
+2888.314 Ship60 departing
+2888.314 Ship62 acquired pier
+2888.314 Ship62 Testing condition: true
+2888.314 Ship62 acquires 2 tugboats
+2896.529 Ship61 finished unloading, requesting tugboat
+2896.529 Ship61 acquires 1 tugboat to undock
+2910.814 Ship62 has docked, releases tugs
+2910.814 Ship62 starts to unload for: 18.749405932041576
+2911.154 Ship61 releases tugboat
+2911.154 Ship61 departing
+2911.154 Ship63 acquired pier
+2911.154 Ship63 Testing condition: true
+2911.154 Ship63 acquires 2 tugboats
+2929.564 Ship62 finished unloading, requesting tugboat
+2929.564 Ship62 acquires 1 tugboat to undock
+2933.654 Ship63 has docked, releases tugs
+2933.654 Ship63 starts to unload for: 22.242165196441825
+2944.189 Ship62 releases tugboat
+2944.189 Ship62 departing
+2944.189 Ship64 acquired pier
+2944.189 Ship64 Testing condition: true
+2944.189 Ship64 acquires 2 tugboats
+2955.896 Ship63 finished unloading, requesting tugboat
+2955.896 Ship63 acquires 1 tugboat to undock
+2962.034 Ship67 arrives 
+2962.034 Ship67 requests pier
+2966.689 Ship64 has docked, releases tugs
+2966.689 Ship64 starts to unload for: 22.180363525647973
+2970.521 Ship63 releases tugboat
+2970.521 Ship63 departing
+2970.521 Ship65 acquired pier
+2970.521 Ship65 Testing condition: true
+2970.521 Ship65 acquires 2 tugboats
+2988.869 Ship64 finished unloading, requesting tugboat
+2988.869 Ship64 acquires 1 tugboat to undock
+2993.021 Ship65 has docked, releases tugs
+2993.021 Ship65 starts to unload for: 30.821826952596766
+3003.494 Ship64 releases tugboat
+3003.494 Ship64 departing
+3003.494 Ship66 acquired pier
+3003.494 Ship66 Testing condition: true
+3003.494 Ship66 acquires 2 tugboats
+3012.519 Ship68 arrives 
+3012.519 Ship68 requests pier
+3023.843 Ship65 finished unloading, requesting tugboat
+3023.843 Ship65 acquires 1 tugboat to undock
+3025.994 Ship66 has docked, releases tugs
+3025.994 Ship66 starts to unload for: 27.030793694489592
+3038.468 Ship65 releases tugboat
+3038.468 Ship65 departing
+3038.468 Ship67 acquired pier
+3038.468 Ship67 Testing condition: true
+3038.468 Ship67 acquires 2 tugboats
+3053.025 Ship66 finished unloading, requesting tugboat
+3053.025 Ship66 acquires 1 tugboat to undock
+3060.968 Ship67 has docked, releases tugs
+3060.968 Ship67 starts to unload for: 24.546472834316997
+3067.650 Ship66 releases tugboat
+3067.650 Ship66 departing
+3067.650 Ship68 acquired pier
+3067.650 Ship68 Testing condition: true
+3067.650 Ship68 acquires 2 tugboats
+3082.758 Ship69 arrives 
+3082.758 Ship69 requests pier
+3085.514 Ship67 finished unloading, requesting tugboat
+3085.514 Ship67 acquires 1 tugboat to undock
+3090.150 Ship68 has docked, releases tugs
+3090.150 Ship68 starts to unload for: 25.310019795884294
+3100.139 Ship67 releases tugboat
+3100.139 Ship67 departing
+3100.139 Ship69 acquired pier
+3100.139 Ship69 Testing condition: true
+3100.139 Ship69 acquires 2 tugboats
+3108.790 Ship70 arrives 
+3108.790 Ship70 requests pier
+3115.460 Ship68 finished unloading, requesting tugboat
+3115.460 Ship68 acquires 1 tugboat to undock
+3120.000 Tide lowtide = true
+3122.639 Ship69 has docked, releases tugs
+3122.639 Ship69 starts to unload for: 25.36665807084963
+3130.085 Ship68 releases tugboat
+3130.085 Ship68 departing
+3130.085 Ship70 acquired pier
+3130.085 Ship70 Testing condition: false
+3131.811 Ship71 arrives 
+3131.811 Ship71 requests pier
+3148.006 Ship69 finished unloading, requesting tugboat
+3148.006 Ship69 acquires 1 tugboat to undock
+3162.631 Ship69 releases tugboat
+3162.631 Ship69 departing
+3162.631 Ship71 acquired pier
+3162.631 Ship71 Testing condition: false
+3162.631 Ship70 Testing condition: false
+3165.844 Ship72 arrives 
+3165.844 Ship72 requests pier
+3210.970 Ship73 arrives 
+3210.970 Ship73 requests pier
+3225.941 Ship74 arrives 
+3225.941 Ship74 requests pier
+3283.078 Ship75 arrives 
+3283.078 Ship75 requests pier
+3283.330 Ship76 arrives 
+3283.330 Ship76 requests pier
+3309.654 Ship77 arrives 
+3309.654 Ship77 requests pier
+3360.000 Tide lowtide = false
+3360.000 Ship71 Testing condition: true
+3360.000 Ship71 acquires 2 tugboats
+3360.000 Ship70 Testing condition: false
+3382.500 Ship71 has docked, releases tugs
+3382.500 Ship71 starts to unload for: 24.901053769242843
+3382.500 Ship70 Testing condition: true
+3382.500 Ship70 acquires 2 tugboats
+3405.000 Ship70 has docked, releases tugs
+3405.000 Ship70 starts to unload for: 20.398717973924526
+3407.401 Ship71 finished unloading, requesting tugboat
+3407.401 Ship71 acquires 1 tugboat to undock
+3422.026 Ship71 releases tugboat
+3422.026 Ship71 departing
+3422.026 Ship72 acquired pier
+3422.026 Ship72 Testing condition: true
+3422.026 Ship72 acquires 2 tugboats
+3425.399 Ship70 finished unloading, requesting tugboat
+3425.399 Ship70 acquires 1 tugboat to undock
+3440.024 Ship70 releases tugboat
+3440.024 Ship70 departing
+3440.024 Ship73 acquired pier
+3440.024 Ship73 Testing condition: false
+3444.526 Ship72 has docked, releases tugs
+3444.526 Ship72 starts to unload for: 20.939431397516564
+3444.526 Ship73 Testing condition: true
+3444.526 Ship73 acquires 2 tugboats
+3465.465 Ship72 finished unloading, requesting tugboat
+3465.465 Ship72 acquires 1 tugboat to undock
+3467.026 Ship73 has docked, releases tugs
+3467.026 Ship73 starts to unload for: 32.330794308515635
+3479.290 Ship78 arrives 
+3479.290 Ship78 requests pier
+3480.090 Ship72 releases tugboat
+3480.090 Ship72 departing
+3480.090 Ship74 acquired pier
+3480.090 Ship74 Testing condition: true
+3480.090 Ship74 acquires 2 tugboats
+3499.357 Ship73 finished unloading, requesting tugboat
+3499.357 Ship73 acquires 1 tugboat to undock
+3502.590 Ship74 has docked, releases tugs
+3502.590 Ship74 starts to unload for: 24.743568208496708
+3510.250 Ship79 arrives 
+3510.250 Ship79 requests pier
+3513.982 Ship73 releases tugboat
+3513.982 Ship73 departing
+3513.982 Ship75 acquired pier
+3513.982 Ship75 Testing condition: true
+3513.982 Ship75 acquires 2 tugboats
+3527.334 Ship74 finished unloading, requesting tugboat
+3527.334 Ship74 acquires 1 tugboat to undock
+3534.090 Ship80 arrives 
+3534.090 Ship80 requests pier
+3536.482 Ship75 has docked, releases tugs
+3536.482 Ship75 starts to unload for: 26.810166896864374
+3541.959 Ship74 releases tugboat
+3541.959 Ship74 departing
+3541.959 Ship76 acquired pier
+3541.959 Ship76 Testing condition: true
+3541.959 Ship76 acquires 2 tugboats
+3558.438 Ship81 arrives 
+3558.438 Ship81 requests pier
+3563.292 Ship75 finished unloading, requesting tugboat
+3563.292 Ship75 acquires 1 tugboat to undock
+3564.459 Ship76 has docked, releases tugs
+3564.459 Ship76 starts to unload for: 25.21552555582074
+3568.630 Ship82 arrives 
+3568.630 Ship82 requests pier
+3577.917 Ship75 releases tugboat
+3577.917 Ship75 departing
+3577.917 Ship77 acquired pier
+3577.917 Ship77 Testing condition: true
+3577.917 Ship77 acquires 2 tugboats
+3589.675 Ship76 finished unloading, requesting tugboat
+3589.675 Ship76 acquires 1 tugboat to undock
+3600.417 Ship77 has docked, releases tugs
+3600.417 Ship77 starts to unload for: 15.848316601459722
+3602.700 Ship83 arrives 
+3602.700 Ship83 requests pier
+3604.300 Ship76 releases tugboat
+3604.300 Ship76 departing
+3604.300 Ship78 acquired pier
+3604.300 Ship78 Testing condition: true
+3604.300 Ship78 acquires 2 tugboats
+3616.265 Ship77 finished unloading, requesting tugboat
+3616.265 Ship77 acquires 1 tugboat to undock
+3626.800 Ship78 has docked, releases tugs
+3626.800 Ship78 starts to unload for: 21.855805581363548
+3630.890 Ship77 releases tugboat
+3630.890 Ship77 departing
+3630.890 Ship79 acquired pier
+3630.890 Ship79 Testing condition: true
+3630.890 Ship79 acquires 2 tugboats
+3647.733 Ship84 arrives 
+3647.733 Ship84 requests pier
+3648.655 Ship78 finished unloading, requesting tugboat
+3648.655 Ship78 acquires 1 tugboat to undock
+3653.390 Ship79 has docked, releases tugs
+3653.390 Ship79 starts to unload for: 26.81867496588131
+3663.280 Ship78 releases tugboat
+3663.280 Ship78 departing
+3663.280 Ship80 acquired pier
+3663.280 Ship80 Testing condition: true
+3663.280 Ship80 acquires 2 tugboats
+3672.512 Ship85 arrives 
+3672.512 Ship85 requests pier
+3680.209 Ship79 finished unloading, requesting tugboat
+3680.209 Ship79 acquires 1 tugboat to undock
+3685.780 Ship80 has docked, releases tugs
+3685.780 Ship80 starts to unload for: 30.31708417056358
+3694.834 Ship79 releases tugboat
+3694.834 Ship79 departing
+3694.834 Ship81 acquired pier
+3694.834 Ship81 Testing condition: true
+3694.834 Ship81 acquires 2 tugboats
+3716.097 Ship80 finished unloading, requesting tugboat
+3716.097 Ship80 acquires 1 tugboat to undock
+3717.334 Ship81 has docked, releases tugs
+3717.334 Ship81 starts to unload for: 24.537313449430474
+3730.722 Ship80 releases tugboat
+3730.722 Ship80 departing
+3730.722 Ship82 acquired pier
+3730.722 Ship82 Testing condition: true
+3730.722 Ship82 acquires 2 tugboats
+3741.871 Ship81 finished unloading, requesting tugboat
+3741.871 Ship81 acquires 1 tugboat to undock
+3753.222 Ship82 has docked, releases tugs
+3753.222 Ship82 starts to unload for: 20.706447925966565
+3756.496 Ship81 releases tugboat
+3756.496 Ship81 departing
+3756.496 Ship83 acquired pier
+3756.496 Ship83 Testing condition: true
+3756.496 Ship83 acquires 2 tugboats
+3773.929 Ship82 finished unloading, requesting tugboat
+3773.929 Ship82 acquires 1 tugboat to undock
+3778.996 Ship83 has docked, releases tugs
+3778.996 Ship83 starts to unload for: 17.677508070633227
+3788.554 Ship82 releases tugboat
+3788.554 Ship82 departing
+3788.554 Ship84 acquired pier
+3788.554 Ship84 Testing condition: true
+3788.554 Ship84 acquires 2 tugboats
+3796.674 Ship83 finished unloading, requesting tugboat
+3796.674 Ship83 acquires 1 tugboat to undock
+3811.054 Ship84 has docked, releases tugs
+3811.054 Ship84 starts to unload for: 25.113363180040203
+3811.299 Ship83 releases tugboat
+3811.299 Ship83 departing
+3811.299 Ship85 acquired pier
+3811.299 Ship85 Testing condition: true
+3811.299 Ship85 acquires 2 tugboats
+3833.799 Ship85 has docked, releases tugs
+3833.799 Ship85 starts to unload for: 16.23897301394961
+3836.167 Ship84 finished unloading, requesting tugboat
+3836.167 Ship84 acquires 1 tugboat to undock
+3850.038 Ship85 finished unloading, requesting tugboat
+3850.038 Ship85 acquires 1 tugboat to undock
+3850.792 Ship84 releases tugboat
+3850.792 Ship84 departing
+3864.663 Ship85 releases tugboat
+3864.663 Ship85 departing
+3900.000 Tide lowtide = true
+3937.072 Ship86 arrives 
+3937.072 Ship86 requests pier
+3937.072 Ship86 acquired pier
+3937.072 Ship86 Testing condition: false
+4018.797 Ship87 arrives 
+4018.797 Ship87 requests pier
+4018.797 Ship87 acquired pier
+4018.797 Ship87 Testing condition: false
+4140.000 Tide lowtide = false
+4140.000 Ship86 Testing condition: true
+4140.000 Ship86 acquires 2 tugboats
+4140.000 Ship87 Testing condition: false
+4161.774 Ship88 arrives 
+4161.774 Ship88 requests pier
+4162.500 Ship86 has docked, releases tugs
+4162.500 Ship86 starts to unload for: 21.54780155313641
+4162.500 Ship87 Testing condition: true
+4162.500 Ship87 acquires 2 tugboats
+4184.048 Ship86 finished unloading, requesting tugboat
+4184.048 Ship86 acquires 1 tugboat to undock
+4185.000 Ship87 has docked, releases tugs
+4185.000 Ship87 starts to unload for: 20.368234175210564
+4198.673 Ship86 releases tugboat
+4198.673 Ship86 departing
+4198.673 Ship88 acquired pier
+4198.673 Ship88 Testing condition: true
+4198.673 Ship88 acquires 2 tugboats
+4205.368 Ship87 finished unloading, requesting tugboat
+4205.368 Ship87 acquires 1 tugboat to undock
+4219.993 Ship87 releases tugboat
+4219.993 Ship87 departing
+4221.173 Ship88 has docked, releases tugs
+4221.173 Ship88 starts to unload for: 22.267625278925216
+4243.440 Ship88 finished unloading, requesting tugboat
+4243.440 Ship88 acquires 1 tugboat to undock
+4258.065 Ship88 releases tugboat
+4258.065 Ship88 departing
+4680.000 Tide lowtide = true
+4920.000 Tide lowtide = false
+5460.000 Tide lowtide = true
+5700.000 Tide lowtide = false

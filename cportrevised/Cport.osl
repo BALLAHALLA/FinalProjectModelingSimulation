@@ -1,0 +1,137 @@
+ use all java.io
+ use java.text.DecimalFormat
+ use all psimjava
+   
+description
+OOSimL model of a Port System with conditional waiting.
+Ships arrive at a port and unload their cargo. Ships request
+2 tugboats and a pier (harbor deck). To leave the ships 
+request 1 tugboat.
+The activities of a ship, ddocking, unloading, and leaving, 
+have a finite period of duration.
+If the resources are not available, ships have to wait.
+
+Condition: Ships are only allowed to dock if 2 tugboats are
+available and the tide is not low. 
+The tide changes every 13 hours. The low tide lasts
+ for 4 hours. The tide is modeled as a process.
+This system is similar to an operating system in which
+processes have conditional waiting, using conditional
+variables in monitors.
+
+(C) J M Garrido, Updated Nov. 2015.
+Dept of Computer Science, Kennesaw State University
+
+Main class: Cport, File: Cport.osl
+*/
+class Cport as process is
+private 
+variables
+   define static arr_mean of type double        // mean inter-arrival period   
+   define static unloadmean of type double      // mean unload interval 
+   define static unloadstdev of type double     // unload standard dev
+public
+variables
+   // global variables
+   define static numarrivals = 0 of type integer   // number of arriving ships
+   define static acc_wait = 0.0 of type double    // accum wait period
+   //
+   define static simperiod of type double      // simulation time period
+   define static close_arrival of type double  // close time for arrival
+      
+object references   
+   define static dockq of class Condq         // conditional wait
+   define static tugs of class Res            // tugboats
+   define static piers of class Res           // jetties
+   //
+   define static run of class Simulation 
+   //
+   define static carrivals of class Arrivals
+   define static cur_tide of class Tide
+   define static port of class Cport
+      
+   define static statf of class PrintWriter  // file for statistics
+   define static tracef of class PrintWriter // file for trace
+   
+ function initializer parameters portname of type string is
+ begin
+     call super using portname
+ endfun initializer
+ //
+ // function to evaluate condition
+ // there must be atleast two tugboats available and
+ // the tide must not be low
+ static function tugs_low_tide return type boolean is
+ begin
+      if  (tugs.num_avail() >= 2) and  (cur_tide.get_lowtide() != true)
+      then
+          return true
+      else
+          return false
+      endif
+ endfun tugs_low_tide
+ //
+ function main is
+ begin         
+      set simperiod = 5760.5        // simulation period
+      set close_arrival = 4073.5    // time to close ship arrivals
+      //
+      set arr_mean = 46.45      // mean inter-arrival period for ships
+      set unloadmean = 24.5     // mean unload interval 
+      set unloadstdev = 3.85    // unload standard dev
+      //
+      simulation title "Port System with Conditions"
+      //
+      // setup files for reporting
+      trace file "cporttrace.txt"
+      statistics file "cportstatf.txt"
+      //
+      // create standard resource objects
+      create tugs of class Res using "Tugs", 3
+      create piers of class Res using "Piers", 2
+      //
+      // Conditional wait object
+      create dockq of class Condq using "Dock cond queue"
+      //
+      // main active object of model
+      create port of class Cport using "Port with Conditions"
+      start object port
+ endfun main
+ //
+ function Main_body is
+ variables
+      define var1 of type double
+      define fmtout1 of type string
+ object references
+      // format object round output to three decimal positions
+      define dfmt of class DecimalFormat 
+ begin      
+      create dfmt of class DecimalFormat using "0.###"
+      set statf = Simulation.get_statfile()   // access statistics file
+      set tracef = Simulation.get_tracefile() // access trace file    
+      //
+      display "Initiating Arrivals with mean inter-arrival: ",
+             arr_mean
+      create carrivals of class Arrivals using "Arrivals ", 
+              arr_mean, unloadmean, unloadstdev
+      start object carrivals
+      //
+      create cur_tide of class Tide using "Tide"
+      start object cur_tide
+      //
+      display "Starting simulation ..."
+      start simulation with simperiod
+      //
+      statwrite "Total number of ships that arrived: ",
+               numarrivals
+      display "Total number of ships that arrived: ",
+               numarrivals
+      set var1 = acc_wait / numarrivals
+      set fmtout1 = call dfmt.format using var1
+      statwrite "Average wait period: ", fmtout1
+      display "Average wait period: ", fmtout1                    
+      //
+      call System.exit using 1
+ endfun Main_body
+endclass Cport
+

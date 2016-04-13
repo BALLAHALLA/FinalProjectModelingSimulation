@@ -1,0 +1,163 @@
+use all psimjava
+
+description
+ OOSimL model of a Port System with conditional waiting	
+ Ships arrive at a port and unload their cargo. Ships request
+ 2 tugboats and a pier. To leave the ships request 1 tugboat.
+ The activities of a ship, docking, unloading, and leaving, 
+ have a finite period of duration.
+ If the resources are not available, ships have to wait.
+
+ Condition: Ships are only allowed to dock if 2 tugboats are
+ available and the tide is not low. 
+ The tide changes every 12 hours. The low tide lasts
+  for 4 hours. The tide is modeled as a process.
+
+ This system is similar to an operating system in which
+ processes have conditional waiting, using conditional
+ variables in monitors.
+
+ Activity of a ship object:
+ 1. conditional wait for tugboats and low tide
+ 2. dock
+ 3. unload
+ 4. undock
+ 5. leave (terminate)
+
+ Assumptions: 
+ 1. dock interval is constant
+ 2. undock interval takes about 65% of dock interval
+ (C) J M Garrido June 2011. Updated Nov. 2014.
+ Department of Computer Science, Kennesaw State University
+ File: Ship.osl
+*/
+      
+public class Ship as process  is
+ private
+ variables
+     define startw of type double       // ship start time of wait
+     define unload of type double       // unload interval
+     define simclock of type double     // current simulation time
+     define shipname of type string
+ object references    
+     define static ctide of class Tide
+ public 
+ variables
+     define shipnum of type integer     // ship number
+ //
+ function initializer parameters shname of type string, unloadper 
+       of type double is
+ begin
+         call super using shname
+         set unload = unloadper
+         set shipnum = Cport.numarrivals     // ship number
+         set shipname = shname
+ endfun initializer
+ //
+ function Main_body is
+ variables
+         define wait_per of type double        // wait interval for this ship
+         define doc_per of type double         // dock interval
+         define tugsavail of type integer      // tug boats available
+         define mcond = false of type boolean  // condition for tide
+ begin
+         assign simulation clock to simclock
+         display shipname, " arrives at: ", simclock
+         tracewrite shipname, " arrives " 
+         set doc_per = 22.5                 // constant dock period
+         // assign simulation clock to simclock
+         set startw = simclock              // start time to wait
+         //
+         display shipname, " requests pier at: ", simclock
+         tracewrite shipname, " requests pier"
+         //
+         // attempt to acquire pier
+         acquire 1 units from Cport.piers
+         //
+         assign simulation clock to simclock
+         display shipname, " acquired pier at time: ", simclock
+         tracewrite shipname, " acquired pier"
+         // wait for high tide and 2 tugboats
+         // display shipname, " waits until condition true at: ", simclock
+         // tracewrite shipname, " waits until condition true"
+         //         
+         set mcond = false
+         while mcond not equal true do         
+            set mcond = call Cport.tugs_low_tide     // evaluate condition
+            display shipname, " Testing condition: ", mcond, " at: ", simclock
+            tracewrite shipname, " Testing condition: ", mcond
+            //   
+            waituntil mcond in Cport.dockq
+            //
+            assign simulation clock to simclock
+         endwhile
+         //
+         // display shipname, " continues at: ", simclock
+         // tracewrite shipname, " continues"
+         //
+
+         //
+         // wait for available tugboats
+         assign available units of Cport.tugs to tugsavail
+         // display "Number of available tugboats: ", tugsavail
+         //
+         acquire 2 units from Cport.tugs    // attempt to acquire tugboats
+         //
+         assign simulation clock to simclock
+         display shipname, " acquires 2 tugboats at: ", simclock
+         tracewrite shipname, " acquires 2 tugboats"
+         //
+         set wait_per = simclock - startw   // wait interval
+         add wait_per to Cport.acc_wait     // accumulate wait
+         // 
+         // ship now will dock
+         hold self for doc_per              // dock interval
+         //
+         release 2 units of Cport.tugs
+         //
+         assign simulation clock to simclock
+         display shipname, " has docked releases tugs, signaling dockq at: ", simclock
+         tracewrite shipname, " has docked, releases tugs" 
+         //   
+         signal to Cport.dockq
+         //
+         // ship will now unload
+         display shipname, " starts to unload for: ", unload
+         tracewrite shipname, " starts to unload for: ", unload
+         //
+         hold self for unload           // take time to unload
+         //
+         assign simulation clock to simclock
+         display shipname, " finished unloading, requesting tugboat at: ", simclock
+         tracewrite shipname, " finished unloading, requesting tugboat"
+         //   
+         set startw =  simclock   // start to wait again
+         //
+         acquire 1 units from Cport.tugs
+         //
+         set simclock = get_clock()
+         display shipname, " acquires 1 tugboat at ", simclock
+         tracewrite shipname, " acquires 1 tugboat to undock"  
+         //
+         set wait_per = simclock - startw
+         add wait_per to Cport.acc_wait 
+         //
+         // undock
+         hold self for (0.65*doc_per)       // time ship takes to undock
+         //
+         release 1 units of Cport.tugs      // release the tugboat
+         //
+         set simclock = get_clock()
+         display shipname, " releases tugboat at: ", simclock
+         tracewrite shipname, " releases tugboat"
+         //
+         release 1 units of Cport.piers     // release the pier
+         //
+         signal to Cport.dockq              // signal condition object
+         //
+         display shipname, " departing at: ", simclock
+         tracewrite shipname, " departing"
+         terminate self                   // terminate this ship process
+ endfun Main_body
+endclass Ship
+

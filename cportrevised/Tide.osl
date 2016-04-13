@@ -1,0 +1,66 @@
+use all psimjava
+description
+OOSimL model of a Port System with conditional waiting
+Ships arrive at a port and unload their cargo. Ships request
+2 tugboats and a pier (harbor deck). To leave the ships request 1 tugboat.
+The activities of a ship, ddocking, unloading, and leaving, 
+have a finite period of duration.
+If the resources are not available, ships have to wait.
+Condition: Ships are only allowed to dock if 2 tugboats are
+available and the tide is not low.
+ 
+This class represents the behavior of the tide object, which changes
+state from low tide to high tide and from high to low. 
+The tide changes every 13 hours (time units). The low tide lasts
+ for 4 time units. The tide is modeled as a process.
+ 
+(C) J M Garrido, June 2011. Updated Nov. 2014. 
+Dept of Computer Science, Kennesaw State University
+
+Main class: Cport File: Tide.java
+*/
+class Tide as process is
+ private
+ variables
+     define lowtide of type boolean   // state of tide object
+     define tidename of type string   // name of tide object
+ public
+ function initializer parameters tname of type string is
+ begin
+     call super using tname
+     set lowtide = true
+     set tidename = tname
+     display tidename, " created "
+ endfun initializer
+ //
+ function get_lowtide return type boolean is
+ begin
+     return lowtide
+ endfun get_lowtide
+ //
+ function Main_body is
+ variables
+     define simclock of type double
+     define lowtidedur of type double
+     define hightidedur of type double
+ begin
+     assign simulation clock to simclock
+     set lowtidedur = 4.0*60.0  // low tide duration in min
+     set hightidedur = 9.0*60.0
+     while simclock <= Cport.simperiod do
+          set lowtide = true
+          display tidename, " lowtide = true at: ", simclock 
+          tracewrite tidename, " lowtide = true"           
+          hold self for lowtidedur      // duration of low tide
+          set lowtide = false
+          assign simulation clock to simclock
+          display tidename, " lowtide = false at: ", simclock
+          tracewrite tidename, " lowtide = false"               
+          signal to Cport.dockq
+          hold self for hightidedur     // duration of high tide
+          assign simulation clock to simclock
+     endwhile
+     terminate self
+ endfun Main_body
+endclass Tide
+

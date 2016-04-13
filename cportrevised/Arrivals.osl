@@ -1,0 +1,83 @@
+use all psimjava
+description
+ OOSimL model of a Port System with conditional waiting.
+Ships arrive at a port and unload their cargo. Ships request
+2 tugboats and a pier (harbor deck). To leave the ships request 1 tugboat.
+The activities of a ship, ddocking, unloading, and leaving, 
+have a finite period of duration.
+If the resources are not available, ships have to wait.
+Condition: Ships are only allowed to dock if 2 tugboats are
+available and the tide is not low. 
+The tide changes every 13 time units. The low tide lasts
+ for 4 time units. The tide is modeled as a process.
+This system is similar to an operating system in which
+processes have conditional waiting, using conditional
+variables in monitors.
+An object of this class creates ship objects randomly using a negative 
+exponential distribution (NegExp), given the mean inter-arrival period.
+
+ (C) J M Garrido June 2011. Updated Nov. 2014.
+ Department of Computer Science, Kennesaw State University
+ 
+ Main class: Cport  File: Arrivals.osl 
+*/
+class Arrivals as process is
+private
+variables
+    define arrname of type string
+    define unloadmean of type double
+    define unloadstd of type double
+object references
+    define next of class NegExp            // Random number generator
+    define unload of class Normal          // Random number generator
+public
+function initializer parameters 
+     larrname of type string, arr_mean of type double, 
+     umean of type double, unlstd of type double
+is
+begin
+     call super using larrname
+     set arrname = larrname
+     // generator of random numbers for inter-arrival times 
+     // Negative exponential probability distribution
+     display arrname, " arr_mean: ", arr_mean, " umean: ", umean, " unlstd: ", unlstd
+     create next of class NegExp using "Ship inter-arrival", arr_mean  
+     // 
+     set unloadmean = umean       // unload mean interval (Normal dist) 
+     set unloadstd = unlstd       // unload standard deviation 
+     // random unload interval
+     create unload of class Normal using
+         "Unload interval", unloadmean, unloadstd
+endfun initializer
+//
+function Main_body is
+variables
+     define simclock of type double
+     define inter_arr of type double   // inter-arrival interval
+     define unloadper of type double   // unload period
+     define boatnum of type integer
+object references
+     define lboat of class Ship
+begin
+     assign simulation clock to simclock
+     while simclock <= Cport.close_arrival do
+         // generate random interarrival interval
+         generate random value inter_arr from next    
+         display arrname, " Inter-arrival interval: ", inter_arr
+         //
+         hold self for inter_arr         // wait for ship arrival
+         increment Cport.numarrivals     // increment ship counter
+         set boatnum = Cport.numarrivals // ship number
+         //
+         // random unload interval
+         assign random value from unload to unloadper  
+         create lboat of class Ship using "Ship" concat boatnum,
+               unloadper
+         start object lboat  
+         assign simulation clock to simclock
+     endwhile
+     display arrname, " terminates at: ", simclock
+     terminate self
+ endfun Main_body
+endclass Arrivals
+
