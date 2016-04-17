@@ -5,25 +5,25 @@ import psimjava.*;
 /** 
 description
  OOSimL model of a Port System with conditional waiting.
-Ships arrive at a port and unload their cargo. Ships request
-2 tugboats and a pier (harbor deck). To leave the ships request 1 tugboat.
-The activities of a ship, ddocking, unloading, and leaving, 
+Cars arrive at a port and unload their cargo. Cars request
+2 tugboats and a pier (harbor deck). To leave the Cars request 1 tugboat.
+The activities of a Car, ddocking, unloading, and leaving, 
 have a finite period of duration.
-If the resources are not available, ships have to wait.
-Condition: Ships are only allowed to dock if 2 tugboats are
+If the resources are not available, Cars have to wait.
+Condition: Cars are only allowed to dock if 2 tugboats are
 available and the tide is not low. 
 The tide changes every 13 time units. The low tide lasts
  for 4 time units. The tide is modeled as a process.
 This system is similar to an operating system in which
 processes have conditional waiting, using conditional
 variables in monitors.
-An object of this class creates ship objects randomly using a negative 
+An object of this class creates Car objects randomly using a negative 
 exponential distribution (NegExp), given the mean inter-arrival period.
 
  (C) J M Garrido June 2011. Updated Nov. 2014.
  Department of Computer Science, Kennesaw State University
  
- Main class: Cport  File: Arrivals.osl 
+ Main class: Offramp  File: Arrivals.osl 
 */
  public  class Arrivals  extends psimjava.Process     {
 static Scanner scan = new Scanner (System.in);
@@ -46,7 +46,7 @@ arr_mean+
 umean+ 
 " unlstd: "+ 
 unlstd);
-next = new NegExp("Ship inter-arrival", arr_mean);
+next = new NegExp("Car inter-arrival", arr_mean);
  //  
 unloadmean =  umean;
  // unload mean interval (Normal dist)  
@@ -62,10 +62,10 @@ unload = new Normal("Unload interval", unloadmean, unloadstd);
   // inter-arrival interval 
  double  unloadper; 
   // unload period 
- int  boatnum; 
-   Ship lboat; 
+ int  carnum; 
+   Car lcar; 
  simclock = StaticSync.get_clock();
- while ( simclock <= Cport.close_arrival ) { 
+ while ( simclock <= Offramp.close_arrival ) { 
  // generate random interarrival interval 
  inter_arr = next.fdraw(); 
 System.out.println(arrname+ 
@@ -73,16 +73,16 @@ System.out.println(arrname+
 inter_arr);
  // 
   delay(inter_arr);
- // wait for ship arrival 
- Cport.numarrivals++;
- // increment ship counter 
- // ship number 
+ // wait for Car arrival 
+ Offramp.numarrivals++;
+ // increment Car counter 
+ // Car number 
  // 
-boatnum =  Cport.numarrivals;
+carnum =  Offramp.numarrivals;
  // random unload interval 
  unloadper = unload.fdraw(); 
-lboat = new Ship("Ship" + boatnum, unloadper);
- lboat.start();
+lcar = new Car("Car" + carnum, unloadper);
+ lcar.start();
  simclock = StaticSync.get_clock();
  } // endwhile 
 System.out.println(arrname+ 

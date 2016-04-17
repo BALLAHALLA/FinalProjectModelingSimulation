@@ -21,7 +21,7 @@ The RushHour changes every 13 hours (time units). The low RushHour lasts
 (C) J M Garrido, June 2011. Updated Nov. 2014. 
 Dept of Computer Science, Kennesaw State University
 
-Main class: Cport File: RushHour.java
+Main class: Offramp File: RushHour.java
 */
  public  class RushHour  extends psimjava.Process     {
 static Scanner scan = new Scanner (System.in);
@@ -49,7 +49,7 @@ return highwaybusy;
 highwaybusydur =  (7.0) * (60.0);
  // low tide duration in min 
 highwayNotBusydur =  (15.0) * (60.0);
- while ( simclock <= Cport.simperiod ) { 
+ while ( simclock <= Offramp.simperiod ) { 
 highwaybusy =   true ;
 System.out.println(rushHourName+ 
 " highwaybusy = true at: "+ 
@@ -65,7 +65,7 @@ System.out.println(rushHourName+
 simclock);
 tracedisp(rushHourName+ 
 " highwaybusy = false");
-  Cport.dockq.signal();
+  Offramp.dockq.signal();
   delay(highwayNotBusydur);
  // duration of high tide 
  simclock = StaticSync.get_clock();

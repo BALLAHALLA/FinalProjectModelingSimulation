@@ -48,16 +48,16 @@ static Scanner scan = new Scanner (System.in);
  public int  carnum; 
   // 
  public Car(  String  crname, double  carDelay) { 
-super(shname); 
+super(crname); 
 cdelay =  carDelay;
 carnum =  Offramp.numarrivals;
  // ship number 
-carname =  shname;
+carname =  crname;
  } // end initializer 
  // 
  public void  Main_body(   ) { 
  double  wait_per; 
-  // wait interval for this ship 
+
  double  doc_per; 
   // dock interval 
  //int  tugsavail; 
@@ -72,29 +72,11 @@ tracedisp(carname+
 " arrives ");
  // constant dock period 
 doc_per =  1.0;
- // assign simulation clock to simclock 
- // start time to wait 
+
 startw =  simclock;
- // 
-//System.out.println(carname+ 
-//" requests pier at: "+ 
-//simclock);
- // 
-//tracedisp(carname+ 
-//" requests pier");
- // attempt to acquire pier 
- //Offramp.piers.acquire(1);
- // 
+
  simclock = StaticSync.get_clock();
-//System.out.println(carname+ 
-//" acquired pier at time: "+ 
-//simclock);
- // wait for high RushHour and 2 tugboats 
- // display carname, " waits until condition true at: ", simclock 
- // tracewrite carname, " waits until condition true" 
-//tracedisp(carname+ 
-//" acquired pier");
- //          
+        
 mcond =   false ;
  while ( mcond !=  true  ) { 
  
@@ -110,7 +92,7 @@ tracedisp(carname+
 " Testing condition: "+ 
 mcond);
  //    
- //Offramp.dockq.waituntil(mcond);
+ Offramp.dockq.waituntil(mcond);
  // 
  simclock = StaticSync.get_clock();
  // 
@@ -118,31 +100,27 @@ mcond);
  // tracewrite carname, " continues" 
  // 
  // 
- } // endwhile 
+ } 
+ 
+ 
+ // endwhile 
  // wait for available tugboats 
  // display "Number of available tugboats: ", tugsavail 
- tugsavail = Offramp.tugs.num_avail(); 
+ //tugsavail = Offramp.tugs.num_avail(); 
  // 
  // attempt to acquire tugboats 
- Offramp.tugs.acquire(2);
+ //Offramp.tugs.acquire(2);
  // 
  simclock = StaticSync.get_clock();
-System.out.println(carname+ 
-" acquires 2 tugboats at: "+ 
-simclock);
-tracedisp(carname+ 
-" acquires 2 tugboats");
- // 
+
 wait_per =  (simclock) - (startw);
- // wait interval 
- // accumulate wait 
- //  
+
  Offramp.acc_wait += wait_per;
  // ship now will dock 
  // dock interval 
   delay(doc_per);
  // 
- Offramp.tugs.release(2);
+ //Offramp.tugs.release(2);
  // 
  simclock = StaticSync.get_clock();
 System.out.println(carname+ 
@@ -174,15 +152,10 @@ tracedisp(carname+
  // start to wait again 
 startw =  simclock;
  // 
- Offramp.tugs.acquire(1);
+ //Offramp.tugs.acquire(1);
  // 
 simclock =  get_clock();
-System.out.println(carname+ 
-" acquires 1 tugboat at "+ 
-simclock);
-tracedisp(carname+ 
-" acquires 1 tugboat to undock");
- // 
+
 wait_per =  (simclock) - (startw);
  // 
  Offramp.acc_wait += wait_per;
@@ -191,20 +164,11 @@ wait_per =  (simclock) - (startw);
   delay(( (0.65) * (doc_per)) );
  // 
  // release the tugboat 
- Offramp.tugs.release(1);
+ //Offramp.tugs.release(1);
  // 
 simclock =  get_clock();
-System.out.println(carname+ 
-" releases tugboat at: "+ 
-simclock);
-tracedisp(carname+ 
-" releases tugboat");
- // 
- // release the pier 
- //Offramp.piers.release(1);
- // 
- // signal condition object 
-  Offramp.dockq.signal();
+
+Offramp.dockq.signal();
  // 
 System.out.println(carname+ 
 " departing at: "+ 
